@@ -1,0 +1,288 @@
+/* Reset Styles */
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Password Generator Style Start */
+
+.password-generator {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/Jpg/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    padding: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 800px;
+    height: 650px;
+
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.30);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+}
+
+
+/* Password Container */
+
+.password-container {
+    margin-bottom: 80px;
+
+    width: 700px;
+    height: 80px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.30);
+}
+
+.password__input {
+    width: 550px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password__result {
+    padding: 0 20px;
+
+    width: 100%;
+
+    color: #FFF;
+    font-size: 24px;
+    text-align: center;
+
+    background-color: #ffffff00;
+}
+
+.password__line {
+    width: 2px;
+    height: 80px;
+
+    background-color: #A6A6A6;
+}
+
+.password__function {
+    padding: 0 20px;
+
+    width: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password__function-pic {
+    cursor: pointer;
+}
+
+.password__change {
+    transition: 1s;
+}
+
+
+/* Length Container */
+
+.length-container {
+    margin-bottom: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.length__title-container {
+    display: flex;
+    align-items: center;
+}
+
+.length__title {
+    margin-right: 37px;
+}
+
+.length__value {
+    font-weight: 700;
+}
+
+.length__input-container {
+    display: flex;
+    align-items: center;
+}
+
+.length__btn {
+    cursor: pointer;
+}
+
+.length__input {
+    margin: 0 25px;
+
+    -webkit-appearance: none;
+
+    width: 200px;
+    height: 10px;
+
+    border-radius: 10px;
+    background-color: #3071A9;
+}
+
+
+.length__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+    background-color: #fff;
+
+    cursor: pointer;
+}
+
+
+/* Characters Container */
+
+.characters-container {
+    margin-bottom: 78px;
+
+    display: flex;
+}
+
+.characters__title {
+    margin-right: 42px;
+}
+
+.setting {
+    margin-bottom: 25px;
+
+    position: relative;
+}
+
+.setting:last-child {
+    margin-bottom: 0;
+}
+
+.setting__input {
+    position: absolute;
+
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.setting__label {
+    margin-left: 51px;
+
+    cursor: pointer;
+}
+
+.setting__label::before,
+.setting__label::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 26px;
+    height: 26px;
+}
+
+.setting__label::before {
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.50);
+
+    z-index: 1;
+}
+
+.setting__label::after {
+    background-image: url(../img/Svg/check__mark-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0;
+    z-index: 2;
+}
+
+.setting__input:checked + .setting__label::before {
+    background: #000;
+}
+
+.setting__input:checked + .setting__label::after {
+    opacity: 1;
+}
+
+
+/* Generate Password Btn Container */
+
+.generate-password__btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.generate-password__btn {
+    width: 200px;
+    height: 50px;
+
+    font-size: 18px;
+
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+
+/* Password Generator Style End */
